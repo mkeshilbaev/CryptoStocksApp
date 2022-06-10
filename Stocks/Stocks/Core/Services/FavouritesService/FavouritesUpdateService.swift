@@ -13,10 +13,12 @@ import Foundation
 
 extension FavouritesUpdateServiceProtocol {
 	func startFavoritesNotificationObserving(){
-		NotificationCenter.default.addObserver(self,
-											   selector: #selector(setFavourite),
-											   name: NSNotification.Name.favourites,
-											   object: nil)
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(setFavourite),
+			name: NSNotification.Name.favourites,
+			object: nil
+		)
 	}
 }
 
